@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestlink: Supporting Homeless Communities</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 32px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(59, 60, 148);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        section {
+            flex-grow: 1;
+            width: 100%;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+            margin-bottom: 30px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgb(55, 36, 122); /* Text color for better contrast on images */
+            background-size: cover;
+            background-position: center;
+        }
+
+        #home {
+            background-image: url('"C:\Users\asus\Desktop\BIPX202\shutterstock_694710103.jpg"');
+        }
+
+        #services {
+            background-image: url('path/to/your/services-background.jpg');
+        }
+
+        #involve {
+            background-image: url('path/to/your/involve-background.jpg');
+        }
+
+        #contact {
+            background-image: url('path/to/your/contact-background.jpg');
+        }
+
+        section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section p, ul {
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        section ul {
+            list-style: none;
+        }
+
+        section ul li {
+            padding: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #4CAF50;
+            color: rgb(231, 233, 240);
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Button styles */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Form styles */
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Map container style */
+        #map {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Hover effects for form */
+        form input:hover, textarea:hover {
+            border-color: #4CAF50;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            section p, ul {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nestlink: Supporting Homeless Communities</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#involve">Get Involved</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Nestlink</h2>
+        <p>
+            Nestlink is a community-driven project aimed at supporting homeless individuals in the Hurstville area by connecting them with local shelters, food, and essential services.
+            Our mission is to empower homeless communities by providing access to vital resources and fostering collaborations with local volunteers, healthcare providers, and businesses.
+        </p>
+        <p>
+            In Hurstville alone, nearly 260 people are currently without shelter. Nestlink seeks to make a tangible difference by offering a platform that allows easy access to shelters, food, medical care, and job opportunities for the homeless population.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Available Services</h2>
+        <p>
+            Our platform provides essential services that help homeless individuals rebuild their lives.
+            We offer the following services through our network of local partners:
+        </p>
+        <ul>
+            <li>Safe and Secure Shelters</li>
+            <li>Access to Food Banks and Meals</li>
+            <li>Medical Care and Mental Health Support</li>
+            <li>Job Search Assistance and Employment Opportunities</li>
+        </ul>
+        <p>
+            These services are designed to meet the basic needs of the homeless community while helping them move toward long-term stability and self-sufficiency.
+        </p>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="involve">
+        <h2>How to Get Involved</h2>
+        <p>
+            We welcome volunteers, donors, and local organizations to join us in making a difference. You can get involved in multiple ways:
+        </p>
+        <ul>
+            <li>Volunteer to help distribute food, clothing, and other essentials.</li>
+            <li>Donate to support our mission of helping homeless individuals.</li>
+            <li>Partner with us as a local shelter, healthcare provider, or business to expand our services.</li>
+        </ul>
+        <p>
+            Use the map below to identify homeless individuals in the Hurstville area, and let us know how we can assist them. Together, we can make a difference.
+        </p>
+
+        <!-- Google Map -->
+        <div id="map"></div>
+
+        <!-- Form to submit information -->
+        <div class="form">
+            <h3>Describe the Homeless Person</h3>
+            <form action="#">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="E.g., Wolli Creek" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" placeholder="Describe the person (e.g., appearance, needs)" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, suggestions, or would like to get involved, feel free to reach out to us:</p>
+        <p>Email: <a href="mailto:info@nestlink.com">infonestlink@gmail.com</a></p>
+        <p>Phone:0415606434</p>
+        <p>Address: Hurstville, Sydney, Australia</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024
